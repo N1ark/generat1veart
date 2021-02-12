@@ -8,7 +8,7 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
-import art.pieces.*;
+import art.pieces.SandTriangles;
 
 public class Main {
 
@@ -27,7 +27,7 @@ public class Main {
 		
 		
 		// put here the piece to generate
-		Piece piece = new Connect();
+		Piece piece = new SandTriangles();
 		
 		BufferedImage result = piece.generate(seed);
 		
