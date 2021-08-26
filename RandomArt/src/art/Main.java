@@ -8,11 +8,11 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
-import art.pieces.SandTriangles;
+import art.pieces.SexyNoise;
 
 public class Main {
 
-	public static final int IMAGE_SIZE = 4096;//4096*4;
+	public static final int IMAGE_SIZE = 1024;//4096*4;
 	
 	public static void main(String[] args) throws IOException {
 		long seed = new Random().nextLong();
@@ -27,11 +27,11 @@ public class Main {
 		
 		
 		// put here the piece to generate
-		Piece piece = new SandTriangles();
+		Piece piece = new SexyNoise();
 		
 		BufferedImage result = piece.generate(seed);
 		
-		
+		System.out.println(new File("generated", fileName).getAbsolutePath());
 		ImageIO.write(result, "png", new File("generated", fileName));
 	}
 	
